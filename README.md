@@ -43,7 +43,7 @@ HOST_METRIC=https://mysterious-island-73235.herokuapp.com/api/metrics
 ```
 Para os ambientes dev, homolog e production, escolhi o PM2 como gerenciador de instância do NodeJS e sua configuração encontra-se no arquivo ecosystem.config.js na raiz do projeto.
 Para um teste real, em um servidor online(DEV, HOMOLOG ou PROD),  espera-se(por motivos de segurança ) que as mesmas variáveis de ambiente do arquivo .env com seus respectivos dados de acesso estejam setadas no servidor.
-Após a instalação das dependências deve-se criar um banco com o nome , usuário e senha informados na variáveis de ambiente.
+Após a instalação das dependências deve-se criar um banco com o nome , usuário e senha informados nas variáveis de ambiente.
 
 Com o banco criado rode o comando:
 ```sh

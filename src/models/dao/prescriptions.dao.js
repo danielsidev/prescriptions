@@ -23,10 +23,11 @@ class PrescriptionsDao extends PostgreSqlClient{
     async deletePrescription(id){
         try {
             this.client = await this.getPool();
+            await this.client.query('BEGIN');
             this.queryFields = `delete  from ${this.getTable()} where id_prescription=$1;`;
             this.queryValues =[id];
             await this.client.query(this.queryFields, this.queryValues );
-            return response.rows;
+            await this.client.query('COMMIT');
         } catch (error) {
             console.log(`We can not get prescriptions :: error : ${error}`);
             throw new Error(`We can not get prescriptions :: error : ${error}`);

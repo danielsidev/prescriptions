@@ -26,7 +26,6 @@ describe('Physician Services', () => {
         let physician = new PhysicianService(process.env.TOKEN_PHYSICIAN, process.env.HOST_PHYSICIAN, id, "GET");
             try {
                 response  = await physician.getResponse();    
-                console.log(JSON.stringify(response));
             } catch (error) {
                 response = error.statusCode
             }

@@ -21,7 +21,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://cryptic-scrubland-98389.herokuapp.com/v2/physicians/1",
+					"raw": "https://cryptic-scrubland-98389.herokuapp.com/v2/physicians/3",
 					"protocol": "https",
 					"host": [
 						"cryptic-scrubland-98389",
@@ -31,7 +31,7 @@
 					"path": [
 						"v2",
 						"physicians",
-						"1"
+						"3"
 					]
 				}
 			},
@@ -53,7 +53,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://agile-earth-43435.herokuapp.com/v1/clinics/2",
+					"raw": "https://agile-earth-43435.herokuapp.com/v1/clinics/1",
 					"protocol": "https",
 					"host": [
 						"agile-earth-43435",
@@ -63,7 +63,7 @@
 					"path": [
 						"v1",
 						"clinics",
-						"2"
+						"1"
 					]
 				}
 			},
@@ -85,7 +85,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://limitless-shore-81569.herokuapp.com/v3/patients/1",
+					"raw": "https://limitless-shore-81569.herokuapp.com/v3/patients/3",
 					"protocol": "https",
 					"host": [
 						"limitless-shore-81569",
@@ -95,7 +95,7 @@
 					"path": [
 						"v3",
 						"patients",
-						"1"
+						"3"
 					]
 				}
 			},
@@ -125,7 +125,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"clinic_id\": 1,\n  \"clinic_name\": \"Clínica A\",\n  \"physician_id\": 1,\n  \"physician_name\": \"José\",\n  \"physician_crm\": \"SP293893\",\n  \"patient_id\": 1,\n  \"patient_name\": \"Rodrigo\",\n  \"patient_email\": \"rodrigo@gmail.com\",\n  \"patient_phone\": \"(16)998765625\"\n}",
+					"raw": "{\n  \"clinic_id\": 1,\n  \"clinic_name\": \"\",\n  \"physician_id\": 1,\n  \"physician_name\": \"José\",\n  \"physician_crm\": \"SP293893\",\n  \"patient_id\": 1,\n  \"patient_name\": \"Rodrigo\",\n  \"patient_email\": \"rodrigo@gmail.com\",\n  \"patient_phone\": \"(16)998765625\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -184,7 +184,7 @@
 			"response": []
 		},
 		{
-			"name": "Register Prescription - Clinic not found",
+			"name": "Register Prescription - Clinic Less Name",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -267,7 +267,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"clinic\":1,\n\t\"physician\":1,\n\t\"patient\":2,\n\t\"text\":\"Tomar Paracetamol 1x ao dia\"\n}",
+					"raw": "{\n\t\"clinic\":10,\n\t\"physician\":1,\n\t\"patient\":2,\n\t\"text\":\"Tomar Dipirona 3x ao dia\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"

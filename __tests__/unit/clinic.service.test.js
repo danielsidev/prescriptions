@@ -25,7 +25,6 @@ describe('Clinic Services', () => {
         let clinic = new ClinicService(process.env.TOKEN_CLINIC, process.env.HOST_CLINIC, id, "GET");
             try {
                 response  = await clinic.getResponse();    
-                console.log(JSON.stringify(response));
             } catch (error) {
                 response = error.statusCode
             }

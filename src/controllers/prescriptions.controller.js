@@ -134,6 +134,7 @@ constructor(){
                         "text":res.rows[0].prescription
                     }
                 }; 
+                pres.cl
                 return response; 
          } catch (error) {
             throw error; 

@@ -6,6 +6,7 @@ describe('Patient Services', () => {
         let id = 1;        
             let patient = new PatientService(process.env.TOKEN_PATIENT, process.env.HOST_PATIENT, id, "GET");
             let response  = await patient.getResponse();
+            console.log(`response: ${JSON.stringify(response)}`);
             expect(response.data.id).toBe(id);     
     });
     it('should patient returns that does not exists', async () => {
@@ -25,7 +26,6 @@ describe('Patient Services', () => {
             let patient = new PatientService(process.env.TOKEN_PATIENT, process.env.HOST_PATIENT, id, "GET");
             try {
                 response  = await patient.getResponse();    
-                console.log(JSON.stringify(response));
             } catch (error) {
                 response = error.statusCode
             }

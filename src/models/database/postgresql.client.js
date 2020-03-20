@@ -29,7 +29,6 @@ class PostgreSqlClient{
                 })
                 .catch((err) => {
                     this.client.end();
-                    console.error('connection error', err.stack);
                     reject('Database connection error!!!');
                 });    
             });
@@ -41,11 +40,9 @@ class PostgreSqlClient{
             try {
                 pool = new Pool(this.config);
                 this.client =  await pool.connect();
-                console.log("Database Connection SUCCESS!!!");
                 return this.client;                
             } catch (error) {
                 this.client.end();
-                console.log("Database Connection ERROR!!!");
                 return error;
             }
          }

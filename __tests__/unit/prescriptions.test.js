@@ -28,17 +28,20 @@ let PrescriptionsDao = require('../../src/models/dao/prescriptions.dao');
             text:" Text test"
         };        
             let prescriptions = new PrescriptionsController();
-            let response  = prescriptions.createPrescription(data);
+            let response  = await prescriptions.createPrescription(data);
             let p = new PrescriptionsDao();
             let id = response.data.id;
             let dataResponse= {
-                clinic:response.data.clinic,
-                physician:response.data.physician,
-                patient:response.data.patient,
+                clinic:response.data.clinic.id,
+                physician:response.data.physician.id,
+                patient:response.data.patient.id,
                 text:response.data.text
             };     
-            p.deletePrescription(id);
-            expect(dataResponse).toBe(data);     
+            await p.deletePrescription(id);
+            expect(dataResponse.clinic).toBe(data.clinic);     
+            expect(dataResponse.physician).toBe(data.physician);     
+            expect(dataResponse.patient).toBe(data.patient);     
+            expect(dataResponse.text).toBe(data.text);     
     });
 
  })
