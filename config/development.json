@@ -1,0 +1,55 @@
+{
+    "error":{
+        "patient":{
+            "not_found":{
+                "code":"03",
+                "message":"patient not found"
+            },
+            "service":{
+                "code":"06",
+                "message":"patients service not available"
+            }
+        },
+        "physician":{
+            "not_found":{
+                "code":"02",
+                "message":"physician not found"
+            },
+            "service":{
+                "code":"05",
+                "message":"physicians service not available"
+            }
+        },
+        "clinic":{             
+            "not_found":{
+                "code":"07",
+                "message":"clinic not found"
+            },
+            "service":{
+                "code":"08",
+                "message":"clinic service not available"
+            }
+        },
+        "metric":{
+            "service":{
+                "code":"04",
+                "message":"metrics service not available"
+            }
+        },
+        "request":{
+            "bad":{
+                "code":"01",
+                "message":"malformed request"
+            },
+            "internal":{
+                "code":"500",
+                "message":"internal server error"
+            }
+        },
+        "prescription":{
+            "data_invalid":"Some data attribute invalid!",
+            "fail_register":"We can't to register the prescription. Please, try later!",
+            "success_register":"We registered the prescription with success!"
+        }
+    }
+}
